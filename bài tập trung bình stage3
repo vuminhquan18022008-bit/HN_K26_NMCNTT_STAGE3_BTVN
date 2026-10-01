@@ -1,0 +1,20 @@
+1. Nguyên nhân hệ thống bị "giật lag"
+Bối cảnh: Khi mở 30 tab Chrome, dung lượng dữ liệu cần xử lý vượt quá khả năng lưu trữ tạm thời của RAM vật lý, dẫn đến mức tiêu thụ RAM chạm mốc 98%.
+Cơ chế: Khi RAM bị lấp đầy, CPU không thể nạp thêm dữ liệu ứng dụng mới trực tiếp vào RAM. Hệ điều hành (Windows) buộc phải kích hoạt cơ chế bộ nhớ ảo (Virtual Memory / Page File / Swap Space) – chuyển bớt các vùng dữ liệu ít dùng trên RAM ghi tạm xuống ổ cứng (Storage).
+Hậu quả: Tốc độ đọc/ghi của ổ cứng chậm hơn RAM hàng trăm đến hàng nghìn lần. Việc CPU liên tục phải chờ đợi dữ liệu luân chuyển giữa RAM và ổ cứng khiến hệ thống bị đình trệ, dẫn đến hiện tượng "giật lag" và con trỏ chuột không mượt.
+2. So sánh Ổ cứng HDD và SSD NVMe khi hết RAM
+Dùng HDD (máy bạn hiện tại): Chậm kinh khủng, máy đơ cứng, ổ đĩa kêu rè rè.
+Nếu đổi sang SSD : Mọi thứ vẫn chạy êm và nhanh hơn rất nhiều vì SSD đọc dữ liệu cực nhanh.
+3. Cần làm gì ngay lập tức để hết lag?
+	Tắt bớt tab: Bấm Ctrl + Shift + Esc, thấy cái nào tốn RAM nhất thì tắt đi.
+	Bật tính năng Tiết kiệm bộ nhớ: Vào Cài đặt của Chrome → Hiệu suất → Bật Tiết kiệm bộ nhớ (Chrome sẽ tự làm ngủ các tab chưa dùng).
+	Cài tiện ích OneTab: Gom 30 tab thành 1 danh sách link gọn nhẹ chỉ bằng 1 cú click.
+
+
+	 Bảng thông số đo đạc thực tế: 
+Chỉ số	Mức sử dụng	Đánh giá trạng thái
+CPU	11%	Bình thường (An toàn): Chip đang xử lý nhẹ nhàng, không bị quá tải. 
+Bộ nhớ (RAM)	85%	Cảnh báo cao: RAM đang sắp đầy, máy bắt đầu có dấu hiệu chậm nhẹ. 
+Đĩa (Disk)	1%	Tốt: Ổ cứng trống nhiều, không bị thắt cổ chai. 
+Mạng (Network)	0%	Tốt: Không có dữ liệu tải ngầm tốn băng thông. 
+
